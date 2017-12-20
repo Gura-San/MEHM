@@ -29,10 +29,14 @@ var Questions = mongoose.model('Question', QuestionSchema)
 var Comments = mongoose.model('Comment', CommentSchema)
 
 
-var schemaExport = {
-    feed: Feed,
-    questions: Questions,
-    comments: Comments
-}
+// var schemaExport = {
+//     feed: Feed,
+//     questions: Questions,
+//     comments: Comments
+// }
 
-module.exports = schemaExport
+
+// module.exports = schemaExport
+module.exports = mongoose
+
+// const Comment = mongoose.model('Comment')
