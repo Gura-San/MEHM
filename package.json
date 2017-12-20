@@ -1,0 +1,25 @@
+{
+  "name": "mehn",
+  "version": "1.0.0",
+  "description": "HelloWorld!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gura-San/MEHM.git"
+  },
+  "author": "Sandro Guraspasvili, Cliff Patterson II",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gura-San/MEHM/issues"
+  },
+  "homepage": "https://github.com/Gura-San/MEHM#readme",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "express-handlebars": "*",
+    "mongoose": "*"
+  }
+}
