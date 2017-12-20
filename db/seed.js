@@ -7,7 +7,9 @@ schema.remove({})
 	})
 	.then(() => {
 		process.exit()
-	})
+    })
+    
+
 
 
 
