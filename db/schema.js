@@ -24,10 +24,12 @@ var FeedSchema = new mongoose.Schema(
     }
 )
 
-mongoose.model('Feed', FeedSchema)
-mongoose.model('Question', QuestionSchema)
-mongoose.model('Comment', CommentSchema)
-
-module.exports = schema
+var Feed = mongoose.model('Feed', FeedSchema)
+var Questions = mongoose.model('Question', QuestionSchema)
+var Comments = mongoose.model('Comment', CommentSchema)
 
 
+
+module.exports = Feed
+module.exports = Questions
+module.exports = Comments
