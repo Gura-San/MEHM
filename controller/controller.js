@@ -1,7 +1,8 @@
 const express       = require('express')
-const connection            = require('../db/connection')
+const connection    = require('../db/connection')
 const router        = express.Router()
-const Feed = connection.Feed
+const Feed          = connection.Feed
+const mongoose      = connection.mongoose
 
 router.get('/', ( req, res) => {
     Feed.find({})
@@ -13,10 +14,17 @@ router.get('/', ( req, res) => {
   })
 
 
-  router.get('/', (req, res) => {
-    res.render('feed-index', {
-        question: 'hello world'
-    })
+  router.get('/:question', (req, res) => {
+    var singleQuestion = req.params.question
+    console.log(singleQuestion)
+    //var feedOutput
+    Feed.findOne({"question": singleQuestion})
+    
+    
+        .then((feed) => {
+        console.log(feed)
+        res.render('thread-index', { feed : feed })
+    })  
   })
 
 // router.get('/', (req, res) => {

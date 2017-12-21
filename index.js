@@ -19,6 +19,7 @@ app.engine('.hbs', hbs({
 }))
 
 app.use('/', feeds)
+app.use('/question', feeds)
 
 app.listen(port, () => {console.log(`listening on port ${port}`)})
 app.use('/', express.static('public'))
