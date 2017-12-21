@@ -1,11 +1,12 @@
 const express = require('express')
 const hbs = require('express-handlebars')
+const feeds = require('./controller/controller')
 var parser = require('body-parser')
-var mongoose = require('./db/connnection')
+var mongoose = require('./db/connection')
 var port = 3002
 var app = express()
 
-var Feed = mongoose.model('Feed')
+// var Feed = mongoose.model('Feed')
 
 app.set('port', process.env.PORT || 4000)
 
@@ -17,15 +18,10 @@ app.engine('.hbs', hbs({
     defaultLayout: 'layout'
 }))
 
+app.use('/', feeds)
 
 app.listen(port, () => {console.log(`listening on port ${port}`)})
 app.use('/', express.static('public'))
 
-app.get('/', ( req, res) => {
-  feeds.find({})
-    .then((feed) => {
-       res.render('feed-index', {
-         feed: question
-       })
-    })
-})
+
+

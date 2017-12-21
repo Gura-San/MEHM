@@ -1,2 +1,2 @@
 var mongoose = require('mongoose')
-odule.exports = Feed
+module.exports = Feed
