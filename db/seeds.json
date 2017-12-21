@@ -3,42 +3,69 @@
       "question": "What time is it?",
       "tread": 
       {
-        "question": "question",
         "date": "2016-03-25",
         "score": 100,
-        "answer": {
+        "answer": [{
           "text": "it's midnight!",
           "date": "2016-03-26",
           "isHidden": false
-        }
+        },
+        {
+          "text": "it's noon!",
+          "date": "2016-03-27",
+          "isHidden": false
+        },
+        {
+          "text": "it's morning",
+          "date": "2016-03-26",
+          "isHidden": false
+        }]
       }
     },
     {
-      "question": "What time is it?",
+      "question": "How are you?",
       "tread": 
       {
-        "question": "question",
         "date": "2016-03-25",
         "score": 100,
-        "answer": {
-          "text": "it's midnight!",
+        "answer": [{
+          "text": "GOOD!",
           "date": "2016-03-26",
           "isHidden": false
-        }
+        },
+        {
+          "text": "WONDERFUL!!!",
+          "date": "2016-03-27",
+          "isHidden": false
+        },
+        {
+          "text": "not so good :(",
+          "date": "2016-03-28",
+          "isHidden": false
+        }]
       }
     },
     {
-      "question": "What time is it?",
+      "question": "Do you want an Icecream?",
       "tread": 
       {
-        "question": "question",
         "date": "2016-03-25",
         "score": 100,
-        "answer": {
-          "text": "it's midnight!",
+        "answer": [{
+          "text": "YES SIR!",
           "date": "2016-03-26",
           "isHidden": false
-        }
+        },
+        {
+          "text": "not really",
+          "date": "2016-03-27",
+          "isHidden": false
+        },
+        {
+          "text": "I want a tomato",
+          "date": "2016-03-28",
+          "isHidden": false
+        }]
       }
     }
       

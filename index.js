@@ -22,7 +22,7 @@ app.listen(port, () => {console.log(`listening on port ${port}`)})
 app.use('/', express.static('public'))
 
 app.get('/', ( req, res) => {
-  Feed.find({})
+  feeds.find({})
     .then((feed) => {
        res.render('feed-index', {
          feed: question
