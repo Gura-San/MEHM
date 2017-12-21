@@ -1,16 +1,16 @@
 var mongoose = require('mongoose')
 
-var Feedschema = new mongoose.schema(
+var FeedSchema = new mongoose.Schema(
     {
-        question: string,
+        question: String,
         tread: {
-            question: string,
-            date: date,
-            score: number,
+            question: String,
+            date: Date,
+            score: Number,
             answer: {
-                text: string,
-                date: date,
-                ishidden: boolean
+                text: String,
+                date: Date,
+                ishidden: Boolean
             }
         }
     }
@@ -19,7 +19,7 @@ var Feedschema = new mongoose.schema(
 // var feed = mongoose.model('feed', feedschema, 'post')
 // var questions = mongoose.model('question', questionschema, 'post')
 
-mongoose.model('Feed', Feedschema)
+mongoose.model('Feed', FeedSchema)
 mongoose.connect('mongodb://localhost/sof', { useMongoClient: true })
 
 mongoose.Promise = Promise
