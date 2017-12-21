@@ -22,31 +22,39 @@ router.get('/', ( req, res) => {
     
     
         .then((feed) => {
-        console.log(feed)
         res.render('thread-index', { feed : feed })
     })  
   })
 
-// router.get('/', (req, res) => {
-//   res.render('candidates-index', {
-//     candidates: db.candidates
-//   })
-// })
+  router.post('/:question', (req, res) => {
+    var singleQuestion = req.body.question
+    //var feedOutput
+    Feed.findOneAndRemove({"question": singleQuestion})
+    
+        .then((feed) => {
+        res.render('thread-index', { feed : feed })
+    })  
+  })
 
-// router.get('/:name', (req, res) => {
-//   var desiredName = req.params.name
-//   var candidateOutput
+  router.post('/:question', (req, res) => {
+    var singleQuestion = req.body.question
+    //var feedOutput
+    Feed.create({"question": singleQuestion})
+    
+        .then((feed) => {
+        res.render('thread-index', { feed : feed })
+    })  
+  })
 
-//   db.candidates.forEach((candidate) => {
-//     if(desiredName === candidate.name){
-//       candidateOutput = candidate
-//     }
-//   })
-
-//   res.render('candidates-show', {
-//     candidate: candidateOutput
-//   })
-// })
+  router.post('/:question', (req, res) => {
+    var singleQuestion = req.body.question
+    //var feedOutput
+    Feed.findOneAndUpdate({"question": singleQuestion})
+    
+        .then((feed) => {
+        res.render('thread-index', { feed : feed })
+    })  
+  })
 
 
 module.exports = router
