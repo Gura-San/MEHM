@@ -19,5 +19,5 @@ app.engine('.hbs', hbs({
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', ( req, res) => {
-	ress.send('hello stack')
+	res.send('hello stack')
 })
