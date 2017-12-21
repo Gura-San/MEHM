@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/stack', { useMongoClient: true })
+mongoose.connect('mongodb://localhost/sof', { useMongoClient: true })
 
 mongoose.Promise = Promise
 
