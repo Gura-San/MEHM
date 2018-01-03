@@ -1,9 +1,13 @@
-const schema = require('./schema')
+const mongoose = require('./connnection')
 const seedData = require('./seeds.json')
 
-schema.remove({})
+// const Comment = mongoose.model('Comment')
+// const Question = mongoose.model('Question')
+var Feed = mongoose.model('Feed')
+
+Feed.remove({})
 	.then(() => {
-	 	return schema.collection.insert(seedData)
+	 	return Feed.collection.insert(seedData)
 	})
 	.then(() => {
 		process.exit()
