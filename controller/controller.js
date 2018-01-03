@@ -28,12 +28,12 @@ router.get("/question/delete/:question", (req, res) => {
   .then(res.redirect("/"))
 });
 
-router.post("/question/:question", (req, res) => {
+router.post("/question/post/:question", (req, res) => {
   var singleQuestion = req.body.question;
   //var feedOutput
   Feed.create({ question: singleQuestion })
   .then(feed => {
-    res.render("thread-index", { feed: feed });
+    res.redirect("/");
   });
 });
 
