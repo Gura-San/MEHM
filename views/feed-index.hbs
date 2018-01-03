@@ -3,7 +3,7 @@
 {{#each feed as |feed index|}}
 
 <h2> 
-  <a href="/question/{{feed.question}}">{{feed.question}}</a>
+  <a href="/question/{{feed.question}}">{{feed.question}}</a> [<a href="/question/delete/{{feed.question}}">X</a>]
 <h2>
 {{/each}}
 

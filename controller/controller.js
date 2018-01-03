@@ -23,13 +23,9 @@ router.get("/question/:question", (req, res) => {
   });
 });
 
-router.post("/question/:question", (req, res) => {
-  var singleQuestion = req.body.question;
-  //var feedOutput
-  Feed.findOneAndRemove({ question: singleQuestion })
-  .then(feed => {
-    res.render("thread-index", { feed: feed });
-  });
+router.get("/question/delete/:question", (req, res) => {
+  Feed.findOneAndRemove({ question: req.params.question })
+  .then(res.redirect("/"))
 });
 
 router.post("/question/:question", (req, res) => {
@@ -41,14 +37,14 @@ router.post("/question/:question", (req, res) => {
   });
 });
 
-router.post("/question/:question", (req, res) => {
-  var singleQuestion = req.body.question;
-  //var feedOutput
-  Feed.findOneAndUpdate({ question: singleQuestion })
-  .then(feed => {
-    res.render("thread-index", { feed: feed });
-  });
-});
+// router.post("/question/:question", (req, res) => {
+//   var singleQuestion = req.body.question;
+//   //var feedOutput
+//   Feed.findOneAndUpdate({ question: singleQuestion })
+//   .then(feed => {
+//     res.render("thread-index", { feed: feed });
+//   });
+// });
 
 router
   .route("/signup")
